@@ -1,10 +1,9 @@
+import ButtonUpdateReservation from "@/app/_components/ButtonUpdateReservation";
 import { updateReservation } from "@/app/_lib/actions";
 import { getBooking, getCabin } from "@/app/_lib/data-service";
 
 export default async function Page({ params }) {
   const booking = await getBooking(params.bookingId);
-
-  // console.log(booking);
 
   const { numGuests, cabinId, observations } = booking;
   const { maxCapacity } = await getCabin(cabinId);
@@ -16,7 +15,7 @@ export default async function Page({ params }) {
       </h2>
 
       <form
-        action={() => updateReservation(formData)}
+        action={updateReservation}
         className="bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col"
       >
         <div className="space-y-2">
@@ -51,10 +50,9 @@ export default async function Page({ params }) {
         </div>
 
         <div className="flex justify-end items-center gap-6">
-          <button className="bg-accent-500 px-8 py-4 text-primary-800 font-semibold hover:bg-accent-600 transition-all disabled:cursor-not-allowed disabled:bg-gray-500 disabled:text-gray-300">
-            Update reservation
-          </button>
+          <ButtonUpdateReservation />
         </div>
+        <input name="bookingId" type="hidden" value={params.bookingId}></input>
       </form>
     </div>
   );
