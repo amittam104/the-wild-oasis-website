@@ -48,6 +48,31 @@ export async function deleteReservation(bookingId) {
   revalidatePath("/account/reservations");
 }
 
+export async function updateReservation(formData) {
+  const session = await auth();
+  if (!session) throw new Error("Please log in to update the reservations");
+
+  const guestBookings = await getBookings(session.user.guestId);
+  const bookingIDs = guestBookings.map((booking) => booking.id);
+
+  // if (!bookingIDs.includes(bookingId))
+  //   throw new Error("You are not allowed to update this reservation");
+
+  console.log(formData);
+
+  // const { data, error } = await supabase
+  //   .from("bookings")
+  //   .update(updatedFields)
+  //   .eq("id", bookingId)
+  //   .select()
+  //   .single();
+
+  // if (error) {
+  //   console.error(error);
+  //   throw new Error("Booking could not be updated");
+  // }
+}
+
 export async function signInAction() {
   await signIn("google", { redirectTo: "/account" });
 }
