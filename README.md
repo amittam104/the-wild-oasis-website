@@ -3,11 +3,6 @@
 The wild Oasis is a Luxurious cabin hotel, located in the heart of the Italian dolomites, surrounded by beutiful mountains and dark forests
 <br>
 
-## Demo
-
-[![BentoHub grid image](https://cloud.appwrite.io/v1/storage/buckets/667d390e003b1971a8be/files/669ba3d3000d629bb97b/preview?project=667d35ca0017fb21fc6c)](https://bentohub.netlify.app/)
-<br>
-
 ## Tech Stack
 
 Next JS, Supabase, TailwindCSS
