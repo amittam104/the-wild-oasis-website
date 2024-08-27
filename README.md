@@ -10,8 +10,8 @@ Next JS, Supabase, TailwindCSS
 <br>
 
 ## Screenshots
+![App Screenshot](https://github.com/user-attachments/assets/ac6540fb-b354-48bf-9835-1c7c44627ee0)
 
-![App Screenshot](https://pbs.twimg.com/media/GTBeLrdWsAA61O_?format=jpg&name=medium)
 
 <br>
 
